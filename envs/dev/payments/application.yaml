@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd-image-updater.argoproj.io/image-list: yousif101/payments
+    argocd-image-updater.argoproj.io/image-list: payments=yousif101/payments
     argocd-image-updater.argoproj.io/payments.update-strategy: semver
     argocd-image-updater.argoproj.io/write-back-method: git
   finalizers:

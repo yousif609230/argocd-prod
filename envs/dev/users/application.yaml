@@ -22,10 +22,14 @@ spec:
           value: yousif101/users
         - name: service.port
           value: '8080'
-        # - name: livenessProbe.httpGet.path
-        #   value: /healthz
-        # - name: readinessProbe.httpGet.path
-        #   value: /healthz
+        - name: livenessProbe.httpGet.path
+          value: /healthz
+        - name: livenessProbe.httpGet.port
+          value: '8080'  # Ensure this matches the application's listening port
+        - name: readinessProbe.httpGet.path
+          value: /healthz
+        - name: readinessProbe.httpGet.port
+          value: '8080'  # Ensure this matches the
         - name: image.tag
           value: 0.1.0
     path: helm-charts/users

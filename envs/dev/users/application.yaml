@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd-image-updater.argoproj.io/image-list: users=yousif101/argocdproj:0.x
+    argocd-image-updater.argoproj.io/image-list: users=yousif101/users:0.x
     argocd-image-updater.argoproj.io/users.update-strategy: semver
     argocd-image-updater.argoproj.io/write-back-method: git
   finalizers:

@@ -15,7 +15,7 @@ spec:
     helm:
       parameters:
         - name: image.repository
-          value: yousif101/argocdproj
+          value: yousif101/users
         - name: service.port
           value: '8080'
         - name: livenessProbe.httpGet.path

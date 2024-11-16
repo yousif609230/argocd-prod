@@ -17,17 +17,8 @@ spec:
   project: default
   source:
     helm:
-      parameters:
-        - name: image.repository
-          value: yousif101/payments
-        - name: service.port
-          value: '8080'
-        - name: livenessProbe.httpGet.path
-          value: /healthz
-        - name: readinessProbe.httpGet.path
-          value: /healthz
-        - name: image.tag
-          value: 0.1.0
+      valueFiles:
+        - ./values.yaml
     path: helm-charts/payments
     repoURL: https://github.com/yousif609230/argocd-prod.git
     targetRevision: main

@@ -1,0 +1,14 @@
+image:
+  repository: yousif101/payments
+  tag: 0.1.0
+
+service:
+  port: 8080
+
+livenessProbe:
+  httpGet:
+    path: /healthz
+
+readinessProbe:
+  httpGet:
+    path: /healthz
